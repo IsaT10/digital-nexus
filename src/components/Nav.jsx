@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { toast } from "react-toastify";
-// import avatar from "../../assets/user8.png";
 import { AuthContext } from "../context/AuthContext";
 
 const Nav = () => {
@@ -128,7 +127,6 @@ const Nav = () => {
                 >
                   Logout
                 </button>
-                <li className="font-semibold uppercase">{user?.displayName}</li>
 
                 {user?.photoURL ? (
                   <div className="avatar">

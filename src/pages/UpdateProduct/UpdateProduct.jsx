@@ -1,8 +1,8 @@
 import { useState } from "react";
-import DescribeRoute from "../../components/DescribeRoute/DescribeRoute";
 import Button from "../../components/Button";
+import DescribeRoute from "../../components/DescribeRoute/DescribeRoute";
 
-const AddProduct = () => {
+const UpdateProduct = () => {
   const [productInfo, setProductInfo] = useState({
     name: "",
     brandName: "",
@@ -12,42 +12,30 @@ const AddProduct = () => {
     rating: "",
     image: "",
   });
-  //    try {
-  //         const response = await fetch("/data.json");
-  //         const data = await response.json();
-  //         setServices(data);
-  //         setLoading(false);
-  //         setError("");
-  //       } catch (error) {
-  //         console.error("Error fetching data:", error);
-  //         setError("Failed to fetch data");
-  //         setService(null);
-  //       }
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const product = { ...productInfo };
     console.log(product);
 
-    const addProduct = async (data) => {
-      try {
-        const res = await fetch("http://localhost:5000/products", {
-          method: "POST",
-          headers: { "content-type": "application/json" },
-          body: JSON.stringify(data),
-        });
-        const result = await res.json();
-        console.log("success:", result);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-    addProduct(product);
+    //  const addProduct = async (data) => {
+    //    try {
+    //     //  const res = await fetch("http://localhost:5000/products", {
+    //     //    method: "POST",
+    //     //    headers: { "content-type": "application/json" },
+    //     //    body: JSON.stringify(data),
+    //      });
+    //      const result = await res.json();
+    //      console.log("success:", result);
+    //    } catch (error) {
+    //      console.error("Error fetching data:", error);
+    //    }
+    //  };
+    //  addProduct(product);
   };
-
   return (
     <div className="my-5 md:mt-10">
-      <DescribeRoute>addproduct</DescribeRoute>
+      <DescribeRoute>updateproduct</DescribeRoute>
       <div className="border-t-2 border-stone-600">
         <form
           onSubmit={handleSubmit}
@@ -147,11 +135,11 @@ const AddProduct = () => {
               }}
             />
           </div>
-          <Button>Add Product</Button>
+          <Button>Update Product</Button>
         </form>
       </div>
     </div>
   );
 };
 
-export default AddProduct;
+export default UpdateProduct;
