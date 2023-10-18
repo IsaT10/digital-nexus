@@ -93,7 +93,7 @@ const Nav = () => {
             </li>
             <li>
               <NavLink
-                to="/contact"
+                to="/addproduct"
                 className={({ isActive, isPending }) =>
                   isPending
                     ? "pending"

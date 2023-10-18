@@ -16,7 +16,7 @@ const Footer = () => {
               Jom Jom Tower, Uttora, Dhaka
             </p>
             <p className="hover:text-white duration-300 cursor-pointer">
-              44 1793 123 456
+              44 173 123 456
             </p>
             <p className="hover:text-white duration-300 cursor-pointer">
               digital@nexus.com
