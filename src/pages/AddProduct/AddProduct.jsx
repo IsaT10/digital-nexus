@@ -12,11 +12,37 @@ const AddProduct = () => {
     rating: "",
     image: "",
   });
+  //    try {
+  //         const response = await fetch("/data.json");
+  //         const data = await response.json();
+  //         setServices(data);
+  //         setLoading(false);
+  //         setError("");
+  //       } catch (error) {
+  //         console.error("Error fetching data:", error);
+  //         setError("Failed to fetch data");
+  //         setService(null);
+  //       }
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const product = { ...productInfo };
     console.log(product);
+
+    const addProduct = async (data) => {
+      try {
+        const res = await fetch("http://localhost:5000/products", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify(data),
+        });
+        const result = await res.json();
+        console.log("success:", result);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    addProduct(product);
   };
 
   return (

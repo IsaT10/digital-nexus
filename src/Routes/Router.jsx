@@ -14,12 +14,16 @@ const router = createBrowserRouter([
     element: <MainLayout />,
     errorElement: <ErrorPage />,
     children: [
-      { path: "/", element: <Home /> },
+      {
+        path: "/",
+        element: <Home />,
+        loader: () => fetch("http://localhost:5000/brands"),
+      },
       { path: "/about", element: <About /> },
       { path: "/login", element: <Login /> },
       { path: "/signup", element: <Signup /> },
       { path: "/cart", element: <Cart /> },
-      {path:'/addproduct',element:<AddProduct/>}
+      { path: "/addproduct", element: <AddProduct /> },
     ],
   },
 ]);

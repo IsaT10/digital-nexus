@@ -1,12 +1,13 @@
 import React from "react";
 import Nav from "../components/Nav";
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet, useLocation, useNavigation } from "react-router-dom";
 import Banner from "../components/Banner";
 import Footer from "../components/Footer";
 
 const MainLayout = () => {
   const locction = useLocation();
-
+  const navigation = useNavigation();
+  console.log(navigation);
   return (
     <>
       <header className={locction.pathname === "/" ? "bg-img" : ""}>
