@@ -1,0 +1,210 @@
+[
+  {
+    "rating": 4.5,
+    "price": "$799.99",
+    "type": "smartphone",
+    "brandName": "Samsung",
+    "name": "Samsung Galaxy S23 Ultra",
+    "image": "https://i.ibb.co/9gG4Mzf/samsung1-1.jpg"
+  },
+  {
+    "rating": 4.0,
+    "price": "$999.99",
+    "type": "smart TV",
+    "brandName": "Samsung",
+    "name": "Samsung 65-Inch 4K Smart TV",
+    "image": "https://i.ibb.co/dmfKQqy/samsung3-1.jpg"
+  },
+  {
+    "rating": 4.8,
+    "price": "$299.99",
+    "type": "tablet",
+    "brandName": "Samsung",
+    "name": "Samsung Galaxy Tab S7",
+    "image": "https://i.ibb.co/6Nng4sf/samsung2-1.jpg"
+  },
+  {
+    "rating": 4.2,
+    "price": "$599.99",
+    "type": "smartphone",
+    "brandName": "Samsung",
+    "name": "Samsung Z Fold",
+    "image": "https://i.ibb.co/XVYZPBq/samsung4-1.jpg"
+  },
+  {
+    "rating": 4.7,
+    "price": "$1,199.99",
+    "type": "laptop",
+    "brandName": "Apple",
+    "name": "MacBook Pro",
+    "image": "https://i.ibb.co/p4qfryT/apple4.jpg"
+  },
+  {
+    "rating": 4.8,
+    "price": "$999.99",
+    "type": "smartphone",
+    "brandName": "Apple",
+    "name": "iPhone 14 Pro Max",
+    "image": "https://i.ibb.co/HnftYpp/apple1-1.jpg"
+  },
+  {
+    "rating": 4.6,
+    "price": "$699.99",
+    "type": "tablet",
+    "brandName": "Apple",
+    "name": "iPad Air",
+    "image": "https://i.ibb.co/b6XMBV7/apple3.jpg"
+  },
+  {
+    "rating": 4.9,
+    "price": "$199.99",
+    "type": "smartwatch",
+    "brandName": "Apple",
+    "name": "Apple Watch Series 7",
+    "image": "https://i.ibb.co/9Y6kRhF/apple2.jpg"
+  },
+  {
+    "rating": 4.5,
+    "price": "$249.99",
+    "type": "smart TV",
+    "brandName": "Apple",
+    "name": "Apple TV",
+    "image": "https://i.ibb.co/p4qfryT/apple4.jpg"
+  },
+  {
+    "rating": 4.6,
+    "price": "$799.99",
+    "type": "smartphone",
+    "brandName": "Google",
+    "name": "Google Pixel 6",
+    "image": "https://i.ibb.co/z4LCQMm/google3-1.jpg"
+  },
+  {
+    "rating": 4.2,
+    "price": "$129.99",
+    "type": "smart speaker",
+    "brandName": "Google",
+    "name": "Google Nest Mini",
+    "image": "https://i.ibb.co/QpcnQTN/google2-1.jpg"
+  },
+  {
+    "rating": 4.5,
+    "price": "$199.99",
+    "type": "earbuds",
+    "brandName": "Google",
+    "name": "Google Pixelbuds",
+    "image": "https://example.com/google-pixelbook.jpg"
+  },
+  {
+    "rating": 4.8,
+    "price": "$349.99",
+    "type": "smart display",
+    "brandName": "Google",
+    "name": "Google Nest Hub",
+    "image": ""
+  },
+  {
+    "rating": 4.7,
+    "price": "$199.99",
+    "type": "streaming device",
+    "brandName": "Google",
+    "name": "Chromecast with Google TV",
+    "image": "https://i.ibb.co/bXKZPM5/google1.jpg"
+  },
+  {
+    "rating": 4.5,
+    "price": "$999.99",
+    "type": "smartphone",
+    "brandName": "Sony",
+    "name": "Sony Xperia 1 III",
+    "image": "https://i.ibb.co/d7VXQnZ/sony1-2.jpg"
+  },
+  {
+    "rating": 4.3,
+    "price": "$799.99",
+    "type": "headphones",
+    "brandName": "Sony",
+    "name": "Sony WH-1000XM4",
+    "image": "https://i.ibb.co/52n7smc/sony3.jpg"
+  },
+  {
+    "rating": 4.6,
+    "price": "$1,499.99",
+    "type": "camera",
+    "brandName": "Sony",
+    "name": "Sony Alpha a7 III",
+    "image": "https://i.ibb.co/phf18ry/sony2-1.jpg"
+  },
+  {
+    "rating": 4.7,
+    "price": "$349.99",
+    "type": "console",
+    "brandName": "Sony",
+    "name": "Sony PlayStation 5",
+    "image": "https://i.ibb.co/4NMN0cR/sony4-1.jpg"
+  },
+  {
+    "rating": 4.6,
+    "price": "$699.99",
+    "type": "smartphone",
+    "brandName": "Xiaomi",
+    "name": "Xiaomi Mi 13",
+    "image": "https://i.ibb.co/ChV8g36/mi4-1.jpg"
+  },
+  {
+    "rating": 4.4,
+    "price": "$699.99",
+    "type": "monitor",
+    "brandName": "Xiaomi",
+    "name": "Xiaomi Monitor 65",
+    "image": "https://i.ibb.co/bN4cPcm/mi1.jpg"
+  },
+  {
+    "rating": 4.5,
+    "price": "$59.99",
+    "type": "other",
+    "brandName": "Xiaomi",
+    "name": "Xiaomi Trimmer",
+    "image": "https://i.ibb.co/fYgLB2p/mi2.jpg"
+  },
+  {
+    "rating": 4.2,
+    "price": "$559.99",
+    "type": "vr",
+    "brandName": "Xiaomi",
+    "name": "Xiaomi VR",
+    "image": "https://i.ibb.co/M8DStv6/mi3.jpg"
+  },
+  {
+    "rating": 4.7,
+    "price": "$299.99",
+    "type": "processor",
+    "brandName": "Intel",
+    "name": "Intel Core i9-11900K",
+    "image": "https://i.ibb.co/z2YYMw4/intel1.jpg"
+  },
+  {
+    "rating": 4.7,
+    "price": "$199.99",
+    "type": "processor",
+    "brandName": "Intel",
+    "name": "Intel Core i7",
+    "image": "https://i.ibb.co/gwzD9kX/intel3.webp"
+  },
+  {
+    "rating": 4.7,
+    "price": "$159.99",
+    "type": "processor",
+    "brandName": "Intel",
+    "name": "Intel Core i5",
+    "image": "https://i.ibb.co/z2YYMw4/intel1.jpg"
+  },
+  {
+    "rating": 4.7,
+    "price": "$299.99",
+    "type": "processor",
+    "brandName": "Intel",
+    "name": "Intel Core i3",
+    "image": "https://i.ibb.co/0hTpTcR/intel4.webp"
+  }
+]
