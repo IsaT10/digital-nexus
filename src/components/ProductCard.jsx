@@ -7,7 +7,7 @@ const ProductCard = ({
     <div>
       <div className="flex flex-col items-center justify-center ">
         <div className="container">
-          <div className="w-[350px] mx-auto sm:w-full bg-primary-color shadow-lg rounded-md ">
+          <div className=" mx-auto sm:w-full bg-primary-color shadow-lg rounded-md ">
             <div className="flex flex-col ">
               <img
                 src={image}

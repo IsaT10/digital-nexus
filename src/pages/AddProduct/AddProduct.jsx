@@ -12,17 +12,6 @@ const AddProduct = () => {
     rating: "",
     image: "",
   });
-  //    try {
-  //         const response = await fetch("/data.json");
-  //         const data = await response.json();
-  //         setServices(data);
-  //         setLoading(false);
-  //         setError("");
-  //       } catch (error) {
-  //         console.error("Error fetching data:", error);
-  //         setError("Failed to fetch data");
-  //         setService(null);
-  //       }
 
   const handleSubmit = (e) => {
     e.preventDefault();
