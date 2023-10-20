@@ -21,7 +21,6 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        // loader: () => fetch("http://localhost:5000/rands"),
       },
       { path: "/about", element: <About /> },
       { path: "/login", element: <Login /> },
@@ -30,14 +29,28 @@ const router = createBrowserRouter([
         path: "/cart",
         element: (
           <PrivateRoute>
-            <Cart />{" "}
+            <Cart />
           </PrivateRoute>
         ),
       },
-      { path: "/addproduct", element: <AddProduct /> },
+      {
+        path: "/addproduct",
+        element: (
+          <PrivateRoute>
+            <AddProduct />
+          </PrivateRoute>
+        ),
+      },
       { path: "/products/:brand", element: <Products /> },
-      { path: "/updateproducts", element: <UpdateProduct /> },
-      { path: "/products/:brandName/:id", element: <ProductDetails /> },
+      { path: "/updateproducts/:id", element: <UpdateProduct /> },
+      {
+        path: "/products/:brandName/:id",
+        element: (
+          <PrivateRoute>
+            <ProductDetails />
+          </PrivateRoute>
+        ),
+      },
     ],
   },
 ]);

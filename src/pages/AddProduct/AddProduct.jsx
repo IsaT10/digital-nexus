@@ -20,11 +20,14 @@ const AddProduct = () => {
 
     const addProduct = async (data) => {
       try {
-        const res = await fetch("http://localhost:5000/products", {
-          method: "POST",
-          headers: { "content-type": "application/json" },
-          body: JSON.stringify(data),
-        });
+        const res = await fetch(
+          "https://digital-nexus-server.vercel.app/products",
+          {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(data),
+          }
+        );
         const result = await res.json();
         console.log("success:", result);
       } catch (error) {
@@ -44,10 +47,12 @@ const AddProduct = () => {
         >
           <div className="flex sm:flex-row flex-col gap-10 ">
             <div className="sm:w-1/2 ">
-              <label className="text-stone-400">Name</label>
+              <label className="text-primary-color dark:text-stone-400">
+                Name
+              </label>
 
               <input
-                className="bg-black border-b-[1px] border-stone-400 outline-none w-full pb-2 text-stone-300  placeholder:text-stone-400 placeholder:pl-3"
+                className="bg-white dark:bg-black border-b-[1px] border-primary-color dark:border-stone-400 outline-none w-full pb-2 text-primary-color dark:text-stone-300   placeholder:pl-3"
                 type="text"
                 value={productInfo.name}
                 onChange={(e) => {
@@ -57,10 +62,12 @@ const AddProduct = () => {
               />
             </div>
             <div className="sm:w-1/2">
-              <label className="text-stone-400">Brand name</label>
+              <label className="text-primary-color dark:text-stone-400">
+                Brand name
+              </label>
 
               <input
-                className="bg-black border-b-[1px] border-stone-400 outline-none w-full pb-2 text-stone-300  placeholder:text-stone-400 placeholder:pl-3"
+                className="bg-white dark:bg-black border-b-[1px] border-primary-color dark:border-stone-400 outline-none w-full pb-2 text-primary-color dark:text-stone-300   placeholder:pl-3"
                 type="text"
                 value={productInfo.brandName}
                 onChange={(e) => {
@@ -71,9 +78,11 @@ const AddProduct = () => {
           </div>
           <div className="flex sm:flex-row flex-col gap-10 ">
             <div className="sm:w-1/2">
-              <label className="text-stone-400">Type</label>
+              <label className="text-primary-color dark:text-stone-400">
+                Type
+              </label>
               <input
-                className="bg-black border-b-[1px] border-stone-400 outline-none w-full pb-2 text-stone-300  placeholder:text-stone-400 placeholder:pl-3"
+                className="bg-white dark:bg-black border-b-[1px] border-primary-color dark:border-stone-400 outline-none w-full pb-2 text-primary-color dark:text-stone-300   placeholder:pl-3"
                 type="text"
                 value={productInfo.type}
                 onChange={(e) => {
@@ -82,10 +91,12 @@ const AddProduct = () => {
               />
             </div>
             <div className="sm:w-1/2">
-              <label className="text-stone-400">Price</label>
+              <label className="text-primary-color dark:text-stone-400">
+                Price
+              </label>
 
               <input
-                className="bg-black border-b-[1px] border-stone-400 outline-none w-full pb-2 text-stone-300  placeholder:text-stone-400 placeholder:pl-3"
+                className="bg-white dark:bg-black border-b-[1px] border-primary-color dark:border-stone-400 outline-none w-full pb-2 text-primary-color dark:text-stone-300   placeholder:pl-3"
                 value={productInfo.price}
                 onChange={(e) => {
                   setProductInfo({ ...productInfo, price: e.target.value });
@@ -96,9 +107,11 @@ const AddProduct = () => {
           </div>
           <div className="flex sm:flex-row flex-col gap-10 ">
             <div className="sm:w-1/2">
-              <label className="text-stone-400">Short description</label>
+              <label className="text-primary-color dark:text-stone-400">
+                Short description
+              </label>
               <input
-                className="bg-black border-b-[1px] border-stone-400 outline-none w-full pb-2 text-stone-300  placeholder:text-stone-400 placeholder:pl-3"
+                className="bg-white dark:bg-black border-b-[1px] border-primary-color dark:border-stone-400 outline-none w-full pb-2 text-primary-color dark:text-stone-300   placeholder:pl-3"
                 type="text"
                 value={productInfo.shortDescription}
                 onChange={(e) => {
@@ -110,10 +123,12 @@ const AddProduct = () => {
               />
             </div>
             <div className="sm:w-1/2">
-              <label className="text-stone-400">Rating</label>
+              <label className="text-primary-color dark:text-stone-400">
+                Rating
+              </label>
 
               <input
-                className="bg-black border-b-[1px] border-stone-400 outline-none w-full pb-2 text-stone-300  placeholder:text-stone-400 placeholder:pl-3 "
+                className="bg-white dark:bg-black border-b-[1px] border-primary-color dark:border-stone-400 outline-none w-full pb-2 text-primary-color dark:text-stone-300   placeholder:pl-3 "
                 value={productInfo.rating}
                 onChange={(e) => {
                   setProductInfo({ ...productInfo, rating: e.target.value });
@@ -123,9 +138,11 @@ const AddProduct = () => {
             </div>
           </div>
           <div className="w-full">
-            <label className="text-stone-400">Image URL</label>
+            <label className="text-primary-color dark:text-stone-400">
+              Image URL
+            </label>
             <input
-              className="bg-black border-b-[1px] border-stone-400 outline-none w-full pb-2 text-stone-300  placeholder:text-stone-400 placeholder:pl-3 mb-4"
+              className="bg-white dark:bg-black border-b-[1px] border-primary-color dark:border-stone-400 outline-none w-full pb-2 text-primary-color dark:text-stone-300   placeholder:pl-3 mb-4"
               type="text"
               value={productInfo.image}
               onChange={(e) => {

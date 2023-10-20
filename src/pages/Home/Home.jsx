@@ -1,42 +1,22 @@
-import { useLoaderData } from "react-router-dom";
 import Faq from "../../components/Faq";
 import Brands from "../../components/Brands";
-import { useEffect, useState } from "react";
 import Spinner from "../../components/Spinner";
+import useGetdata from "../../hooks/useGetData";
+import FindMore from "../../components/FindMore";
 
 const Home = () => {
-  // const brands = useLoaderData() || [];
+  const { allData: brands, loading, error } = useGetdata("brands");
 
-  const [brands, setBrands] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
-
-  useEffect(() => {
-    const brands = async () => {
-      try {
-        const response = await fetch("http://localhost:5000/brands");
-        const data = await response.json();
-        setBrands(data);
-        setLoading(false);
-        setError("");
-      } catch (error) {
-        console.error("Error fetching data:", error);
-        setLoading(false);
-        setError("Failed to fetch data");
-        // setService(null);
-      }
-    };
-    brands();
-  }, []);
   return (
     <>
       <div className="overflow-hidden">
         {error.length > 0 && (
-          <p className="text-center text-3xl font-semibold text-red-500 mt-56">
+          <p className="text-center text-3xl font-semibold text-red-500 my-56">
             {error}
           </p>
         )}
         {loading ? <Spinner /> : <Brands brands={brands} />}
+        <FindMore />
         <Faq />
       </div>
       {/* <div className="overflow-hidden">

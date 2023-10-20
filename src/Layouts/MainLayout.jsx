@@ -1,4 +1,3 @@
-import React from "react";
 import Nav from "../components/Nav";
 import { Outlet, useLocation, useNavigation } from "react-router-dom";
 import Banner from "../components/Banner";
@@ -20,7 +19,7 @@ const MainLayout = () => {
             </div>
             {locction.pathname === "/" && <Banner />}
           </header>
-          <main className="">
+          <main>
             <Outlet />
           </main>
           <footer>

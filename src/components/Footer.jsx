@@ -12,13 +12,13 @@ const Footer = () => {
         <div>
           <h2 className="text-2xl mb-4">Address</h2>
           <div className="flex flex-col gap-1 text-stone-400 ">
-            <p className="hover:text-white duration-300 cursor-pointer">
+            <p className="dark:hover:text-white hover:text-secondary-color text-primary-color dark:text-stone-500  duration-300 cursor-pointer">
               Jom Jom Tower, Uttora, Dhaka
             </p>
-            <p className="hover:text-white duration-300 cursor-pointer">
+            <p className="dark:hover:text-white hover:text-secondary-color text-primary-color dark:text-stone-500  duration-300 cursor-pointer">
               44 173 123 456
             </p>
-            <p className="hover:text-white duration-300 cursor-pointer">
+            <p className="dark:hover:text-white hover:text-secondary-color text-primary-color dark:text-stone-500  duration-300 cursor-pointer">
               digital@nexus.com
             </p>
           </div>
@@ -26,28 +26,28 @@ const Footer = () => {
         <div>
           <h2 className="text-2xl mb-4">Social</h2>
           <div className="flex flex-col gap-2 text-stone-400 text-sm">
-            <p className="hover:text-white duration-300 cursor-pointer">
+            <p className="dark:hover:text-white hover:text-secondary-color text-primary-color dark:text-stone-500  duration-300 cursor-pointer">
               INSTAGRAM
             </p>
-            <p className="hover:text-white duration-300 cursor-pointer">
+            <p className="dark:hover:text-white hover:text-secondary-color text-primary-color dark:text-stone-500  duration-300 cursor-pointer">
               TWITTER
             </p>
-            <p className="hover:text-white duration-300 cursor-pointer">
+            <p className="dark:hover:text-white hover:text-secondary-color text-primary-color dark:text-stone-500  duration-300 cursor-pointer">
               DRIBBLE
             </p>
-            <p className="hover:text-white duration-300 cursor-pointer">
+            <p className="dark:hover:text-white hover:text-secondary-color text-primary-color dark:text-stone-500  duration-300 cursor-pointer">
               LINKEDIN
             </p>
           </div>
         </div>
         <div>
           <h2 className="text-2xl mb-4">News letter</h2>
-          <p className="text-stone-400 hover:text-white duration-300 cursor-pointer mb-4">
+          <p className="text-stone-400 dark:hover:text-white hover:text-secondary-color text-primary-color dark:text-stone-500  duration-300 cursor-pointer mb-4">
             Be up to date with new products.
           </p>
           <div className="relative">
             <input
-              className="bg-black border-b-[1px] border-stone-400 outline-none w-full pb-2 text-stone-200 pl-3 placeholder:text-stone-400"
+              className="bg-white dark:bg-black border-b-[1px] border-primary-color dark:border-stone-400 outline-none w-full pb-2 text-secondary-color dark:text-stone-200 pl-3 placeholder:text-stone-400"
               type="text"
               placeholder="Your e-mail"
             />

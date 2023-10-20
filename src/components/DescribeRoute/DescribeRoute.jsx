@@ -1,16 +1,16 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import "./DescribeRoute.css";
 
 const DescribeRoute = ({ children }) => {
   return (
     <div className="max-w-7xl xl:mx-auto mx-10 mb-9">
       <Link
         to="/"
-        className="underline_animation cursor-pointer relative no-underline ml-2"
+        className="group relative text-primary-color dark:text-white"
       >
         Home
+        <span className="block absolute bottom-0 left-0 w-0 h-[1px] bg-primary-color dark:bg-white   dark:text-white transition-width duration-300 group-hover:w-full"></span>
       </Link>
+
       <span> / {children}</span>
     </div>
   );

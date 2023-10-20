@@ -106,22 +106,23 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-slate-200 sm:w-[350px] md:w-[400px] mx-auto my-20 rounded-md flex flex-col px-10  justify-between shadow-lg py-8">
+    <div className="bg-secondary-color sm:w-[350px] md:w-[400px] mx-auto my-20 rounded-md flex flex-col px-10  justify-between shadow-lg py-8">
       <form
         onSubmit={handleSubmit}
         className=" flex flex-col justify-between  "
       >
-        <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-center">
+        <h2 className="text-xl text-primary-color md:text-2xl lg:text-3xl font-bold text-center">
           Log in
         </h2>
 
         <label className="label">
-          <span className="label-text mt-2 text-gray-600 font-semibold ">
+          <span className="label-text mt-2 text-primary-color font-semibold ">
             Your email
           </span>
         </label>
         <input
-          className="input focus:outline-2 border-none  focus:outline-primary focus:outline-offset-2 input-bordered w-full "
+          className="input 
+         border-none text-secondary-color input-bordered w-full"
           type="text"
           placeholder="E-mail address"
           name="emali"
@@ -134,12 +135,12 @@ const Login = () => {
         </p>
 
         <label className="label">
-          <span className="label-text mt-2 text-gray-600 font-semibold ">
+          <span className="label-text mt-2 text-primary-color font-semibold ">
             Password
           </span>
         </label>
         <input
-          className="input focus:outline-2 border-none focus:outline-primary focus:outline-offset-2 input-bordered w-full "
+          className="input border-none input-bordered text-secondary-color w-full"
           type="password"
           placeholder="Password"
           name="password"
@@ -159,23 +160,23 @@ const Login = () => {
           Forget password
         </button>
 
-        <button className="bg-primary-color px-8 py-2 text-white uppercase font-semibold rounded-sm mt-4 mx-auto w-40 border-primary-color duration-200">
+        <button className="bg-primary-color px-8 py-2 text-stone-200 uppercase font-semibold rounded-sm mt-4 mx-auto w-40 border-primary-color duration-200">
           Login
         </button>
-        <p className="text-center mt-3">
+        <p className="text-center text-stone-200 mt-3">
           Don't have account?
           <Link to="/signup" className="link no-underline text-primary-color">
             {""} Sign up
           </Link>
         </p>
-        <p className="text-center">----Or, Login with----</p>
+        <p className="text-center text-stone-200">----Or, Login with----</p>
       </form>
       <button
         onClick={handleGoogleSignIn}
-        className="bg-white p-3 rounded-full mt-4 flex items-center justify-center gap-2"
+        className="bg-primary-color p-3 rounded-full mt-4 flex items-center justify-center gap-2"
       >
-        <FaGoogle className="text-primary-color" />
-        <span>Google</span>
+        <FaGoogle className="text-secondary-color" />
+        <span className="font-semibold text-stone-200">Google</span>
       </button>
     </div>
   );

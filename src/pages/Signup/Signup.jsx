@@ -135,21 +135,21 @@ const Signup = () => {
   };
 
   return (
-    <div className="bg-slate-200 sm:w-[350px] md:w-[400px] h-[700px] flex flex-col px-6 lg:px-10  mx-auto rounded-md my-10">
+    <div className="bg-secondary-color sm:w-[350px] md:w-[450px] h-[700px] flex flex-col px-10 lg:px-10 mx-16 sm:mx-auto rounded-md my-10">
       <form
         onSubmit={handleSubmit}
         className="flex flex-col  justify-between py-4"
       >
-        <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-center">
+        <h2 className="text-xl text-primary-color md:text-2xl lg:text-3xl font-bold text-center">
           Register
         </h2>
         <label className="label">
-          <span className="label-text lg:mt-4 text-gray-600 font-semibold ">
+          <span className="label-text lg:mt-4 text-primary-color font-semibold ">
             Your name
           </span>
         </label>
         <input
-          className="input focus:outline-2 border-none focus:outline-primary focus:outline-offset-2 input-bordered w-full"
+          className="input border-none input-bordered text-secondary-color w-full"
           type="text"
           placeholder="Name"
           name="name"
@@ -157,12 +157,12 @@ const Signup = () => {
           required
         />
         <label className="label">
-          <span className="label-text lg:mt-2 text-gray-600 font-semibold ">
+          <span className="label-text lg:mt-2 text-primary-color font-semibold ">
             Your email
           </span>
         </label>
         <input
-          className="input focus:outline-2 border-none  focus:outline-primary focus:outline-offset-2 input-bordered w-full "
+          className="input border-none input-bordered text-secondary-color w-full"
           type="text"
           placeholder="E-mail address"
           name="emali"
@@ -173,12 +173,12 @@ const Signup = () => {
           {errors.email}
         </p>
         <label className="label">
-          <span className="label-text lg:mt-2 text-gray-600 font-semibold ">
+          <span className="label-text lg:mt-2 text-primary-color font-semibold ">
             Password
           </span>
         </label>
         <input
-          className="input focus:outline-2 border-none focus:outline-primary focus:outline-offset-2 input-bordered w-full "
+          className="input border-none input-bordered text-secondary-color w-full"
           type="password"
           placeholder="Password"
           name="password"
@@ -189,12 +189,12 @@ const Signup = () => {
           {errors.password}
         </p>
         <label className="label">
-          <span className="label-text lg:mt-2 text-gray-600 font-semibold ">
+          <span className="label-text lg:mt-2 text-primary-color font-semibold ">
             Confirm password
           </span>
         </label>
         <input
-          className="input focus:outline-2 border-none focus:outline-primary focus:outline-offset-2 input-bordered w-full "
+          className="input border-none input-bordered text-secondary-color w-full"
           type="password"
           placeholder="Confirm password"
           name="confirm"
@@ -227,20 +227,20 @@ const Signup = () => {
         >
           Sign up
         </button>
-        <p className="text-center mt-3">
+        <p className="text-center mt-3 text-stone-200">
           Already have an account?
           <Link to="/login" className="link no-underline text-primary-color">
             {""} Login
           </Link>
         </p>
-        <p className="text-center">----Or, sign up with----</p>
+        <p className="text-center text-stone-200">----Or, sign up with----</p>
       </form>
       <button
         onClick={handleGoogleSignIn}
-        className="bg-white p-3 rounded-full mt-4 flex items-center justify-center gap-2"
+        className="bg-primary-color p-3 rounded-full  flex items-center justify-center gap-2"
       >
-        <FaGoogle className="text-primary-color" />
-        <span>Google</span>
+        <FaGoogle className="text-secondary-color" />
+        <span className="font-semibold text-stone-200">Google</span>
       </button>
     </div>
   );

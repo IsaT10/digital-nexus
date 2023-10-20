@@ -13,7 +13,11 @@ const BrandCard = ({ brand: { _id, imageURL, brandName } }) => {
         />
         <div className="absolute inset-0 flex items-center justify-center bg-primary-color opacity-0 hover:opacity-75 transition-opacity duration-200">
           <Link to={`/products/${brandName}`}>
-            <Button>See products</Button>
+            <Button
+              className={"bg bg-white dark:bg-black text-black dark:text-white"}
+            >
+              See products
+            </Button>
           </Link>
         </div>
 
