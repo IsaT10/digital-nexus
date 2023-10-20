@@ -73,21 +73,21 @@ const ProductCard = ({
                   </div>
                   <div className="flex  space-x-2 text-sm font-medium items-center justify-between">
                     <div className="flex items-center flex-col  gap-2">
-                      <div className="tooltip tooltip-right" data-tip="Update">
+                      <div className="tooltip tooltip-left" data-tip="Update">
                         <Link to={`/updateproducts/${_id}`}>
                           <BsFillPencilFill className="text-xl text-secondary-color duration-200 cursor-pointer " />
                         </Link>
                       </div>
                       <Link to={`/products/${brandName}/${_id}`}>
                         <div
-                          className="tooltip tooltip-right"
+                          className="tooltip tooltip-left"
                           data-tip="Details"
                         >
                           <BsEyeFill className="text-2xl text-secondary-color duration-200 cursor-pointer " />
                         </div>
                       </Link>
                       <div
-                        className="tooltip tooltip-right"
+                        className="tooltip tooltip-left"
                         data-tip="Add To cart"
                       >
                         <BsFillCartFill

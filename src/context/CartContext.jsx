@@ -35,9 +35,10 @@ const CartProvider = ({ children }) => {
         body: JSON.stringify(data),
       });
       const result = await res.json();
-      toast.success("Item added successfully!");
-      setCartItems([...cartItems, data]);
-      console.log("success:", result);
+      if (result.acknowledged) {
+        toast.success("Item added successfully!");
+        setCartItems([...cartItems, data]);
+      }
     } catch (error) {
       console.error("Error fetching data:", error);
     }

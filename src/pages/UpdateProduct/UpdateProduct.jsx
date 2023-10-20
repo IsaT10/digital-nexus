@@ -1,12 +1,13 @@
 import Button from "../../components/Button";
 import DescribeRoute from "../../components/DescribeRoute/DescribeRoute";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import useGetQueryData from "../../hooks/useGetQueryData";
 import { toast } from "react-toastify";
 
 const UpdateProduct = () => {
   const { id } = useParams();
   const { queryData } = useGetQueryData("product", id);
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -39,9 +40,9 @@ const UpdateProduct = () => {
           }
         );
         const result = await res.json();
-        console.log(result);
         if (result.modifiedCount > 0) {
           toast.success("Update product successfully");
+          navigate(-1);
         }
       } catch (err) {
         console.log("Error ", err);

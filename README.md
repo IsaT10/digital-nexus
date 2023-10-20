@@ -1,8 +1,14 @@
-# React + Vite
+# 5 project feature
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- In this website, there are lot of popular brands products like apple ,samsung. Also available mobile, camera, earbus etc.
 
-Currently, two official plugins are available:
+- If there are need to update some products I can update or edit them.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- In my website ,if I want to added some products I also added them.
+
+- If individual have some issue with light/dark mode, he/she will change dark or light mode on his/her preferance.
+
+- If they need to cart some products they can add produtcs in cart. It will be stored in cart page.They also controlled cart items.They can delete cart item from cart list.
+
+[Named Link](https://digital-nexus.netlify.app/ "DigitalNexus")
+https://digital-nexus.netlify.app/

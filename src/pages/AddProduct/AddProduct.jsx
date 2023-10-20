@@ -1,6 +1,8 @@
 import { useState } from "react";
 import DescribeRoute from "../../components/DescribeRoute/DescribeRoute";
 import Button from "../../components/Button";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const AddProduct = () => {
   const [productInfo, setProductInfo] = useState({
@@ -12,11 +14,11 @@ const AddProduct = () => {
     rating: "",
     image: "",
   });
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const product = { ...productInfo };
-    console.log(product);
 
     const addProduct = async (data) => {
       try {
@@ -29,7 +31,21 @@ const AddProduct = () => {
           }
         );
         const result = await res.json();
-        console.log("success:", result);
+        if (result.acknowledged) {
+          toast.success("Add product successfully");
+          setProductInfo({
+            ...productInfo,
+            name: "",
+            brandName: "",
+            type: "",
+            price: "",
+            shortDescription: "",
+            rating: "",
+            image: "",
+          });
+          // navigate(`/products/${productInfo.brandName}`);
+          navigate("/");
+        }
       } catch (error) {
         console.error("Error fetching data:", error);
       }

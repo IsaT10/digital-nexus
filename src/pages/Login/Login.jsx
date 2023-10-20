@@ -25,15 +25,16 @@ const Login = () => {
     e.preventDefault();
     const form = e.target;
 
+    if (userInfo.email.length === 0) return;
     if (!userInfo.password) return;
     logIn(userInfo.email, userInfo.password)
       .then((result) => {
         toast.success("Successful Login");
 
         navigate(from, { replace: true });
-        form.reset();
       })
       .catch((error) => {
+        form.reset();
         if (error.code === "auth/network-request-failed") {
           toast.error("Network request failed");
           return;
@@ -106,7 +107,7 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-secondary-color sm:w-[350px] md:w-[400px] mx-auto my-20 rounded-md flex flex-col px-10  justify-between shadow-lg py-8">
+    <div className="bg-secondary-color sm:w-[350px] md:w-[400px] mx-10 sm:mx-auto my-10 md:my-20 rounded-md flex flex-col px-10  justify-between shadow-lg py-8">
       <form
         onSubmit={handleSubmit}
         className=" flex flex-col justify-between  "

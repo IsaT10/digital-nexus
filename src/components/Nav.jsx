@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AuthContext } from "../context/AuthContext";
 import { CartContext } from "../context/CartContext";
+import avatar from "../assets/user8.png";
 
 const Nav = () => {
   const [isDark, setIsDark] = useState(true);
@@ -24,7 +25,7 @@ const Nav = () => {
       });
   };
   return (
-    <div className="px-2 lg:px-0 bg-white dark:bg-transparent text-primary-color dark:text-white py-4 md:pt-7">
+    <div className="px-2 lg:px-0 bg-white dark:bg-transparent text-primary-color dark:text-white py-2 md:py-6">
       <div className="navbar  max-w-7xl mx-auto">
         <div className="md:navbar-start  w-full flex justify-between items-center">
           <div className="flex gap-2 md:gap-2 lg:gap-5 items-center">
@@ -54,7 +55,7 @@ const Nav = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-compact dropdown-content -left-14 mt-3 p-2 shadow bg-base-100 rounded-box w-24 mr-10 z-40"
+              className="menu menu-compact dropdown-content -left-14 mt-3 p-2 shadow bg-base-100 rounded-box w-24 mr-10 z-40 dark:text-white text-black dark:bg-primary-color"
             >
               <li>
                 <Link to="/">Home</Link>
@@ -63,8 +64,13 @@ const Nav = () => {
                 <Link to="/addproduct">Add Product</Link>
               </li>
               <li>
-                <Link to="/cart">Cart({cartItems.length})</Link>
+                <Link to="/cart">
+                  Cart{user?.email && `(${cartItems.length})`}
+                </Link>
               </li>
+              <button onClick={dark}>
+                {isDark ? <li>Dark</li> : <li>Light</li>}
+              </button>
               {user?.email ? (
                 <li>
                   <Link onClick={handleLogout}>Logout</Link>
@@ -91,8 +97,8 @@ const Nav = () => {
                   isPending
                     ? "pending"
                     : isActive
-                    ? "border-l-8 border-primary-color dark:border-stone-300 pl-1 text-lg font-semibold"
-                    : "font-semibold text-lg"
+                    ? "border-l-8 border-primary-color dark:border-stone-300 pl-1 lg:text-lg font-semibold"
+                    : "font-semibold lg:text-lg"
                 }
               >
                 Home
@@ -106,8 +112,8 @@ const Nav = () => {
                   isPending
                     ? "pending"
                     : isActive
-                    ? "border-l-8 border-primary-color dark:border-stone-300 pl-1 text-lg font-semibold"
-                    : "font-semibold text-lg"
+                    ? "border-l-8 border-primary-color  dark:border-stone-300 pl-1 lg:text-lg font-semibold"
+                    : "font-semibold lg:text-lg"
                 }
               >
                 Add product
@@ -120,11 +126,11 @@ const Nav = () => {
                   isPending
                     ? "pending"
                     : isActive
-                    ? "border-l-8 border-primary-color dark:border-stone-300 pl-1 text-lg font-semibold"
-                    : "font-semibold text-lg"
+                    ? "border-l-8 border-primary-color dark:border-stone-300 pl-1 lg:text-lg font-semibold"
+                    : "font-semibold lg:text-lg"
                 }
               >
-                Cart({cartItems.length})
+                Cart{user?.email && `(${cartItems.length})`}
               </NavLink>
             </li>
 
@@ -166,10 +172,8 @@ const Nav = () => {
                     </div>
                   </div>
                 ) : (
-                  <div className="">
-                    <div className="w-10 rounded-full bg-transparent">
-                      <img src={""} alt="asdsa" />
-                    </div>
+                  <div className="w-10 rounded-full bg-transparent">
+                    <img src={avatar} alt="asdsa" />
                   </div>
                 )}
               </>
@@ -182,8 +186,8 @@ const Nav = () => {
                       isPending
                         ? "pending"
                         : isActive
-                        ? " border-l-8 border-primary-color dark:border-stone-300 pl-1 text-lg font-semibold"
-                        : "font-semibold text-lg"
+                        ? " border-l-8 border-primary-color dark:border-stone-300 pl-1 lg:text-lg font-semibold"
+                        : "font-semibold lg:text-lg"
                     }
                   >
                     Sign up
@@ -191,7 +195,7 @@ const Nav = () => {
                 </li>
                 <Link
                   to="/login"
-                  className="bg-transparent border-2 text-sm md:text-base border-white rounded-sm px-3 py-1.5 sm:px-3 sm:py-1.5 md:px-4 md:py-1.5.5  font-semibold"
+                  className="bg-transparent border-2 text-sm md:text-base border-primary-color dark:border-white rounded-sm px-3 py-1.5 sm:px-3 sm:py-1.5 md:px-4 md:py-1.5.5  font-semibold"
                 >
                   Login
                 </Link>
