@@ -7,6 +7,7 @@ import { CartContext } from "../../context/CartContext";
 
 const Cart = () => {
   const { setCartItems, loading, error, cartItems } = useContext(CartContext);
+
   return (
     <div className="my-5 md:mt-10">
       <DescribeRoute>cart</DescribeRoute>

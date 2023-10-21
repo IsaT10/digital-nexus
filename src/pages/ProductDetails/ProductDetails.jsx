@@ -5,6 +5,8 @@ import useGetQueryData from "../../hooks/useGetQueryData";
 import Spinner from "../../components/Spinner";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
+import Star from "../../components/star";
+import { AuthContext } from "../../context/AuthContext";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -14,6 +16,9 @@ const ProductDetails = () => {
   const { queryData: product, loading, error } = useGetQueryData("product", id);
   const { name, brandName, shortDescription, type, image, rating, price } =
     product;
+  const {
+    user: { email },
+  } = useContext(AuthContext);
 
   const handleAddToCart = () => {
     const data = {
@@ -24,6 +29,7 @@ const ProductDetails = () => {
       image,
       rating,
       price,
+      email,
     };
 
     addToCart(data);
@@ -55,10 +61,7 @@ const ProductDetails = () => {
                   </p>
                   <div className="flex justify-between items-center">
                     <div className="flex items-center gap-1">
-                      <BsStarFill className="text-red-500" />
-                      <span className="text-sm text-secondary-color dark:text-stone-400 font-semibold">
-                        {rating}
-                      </span>
+                      <Star rating={rating} />
                     </div>
                     <span className="flex items-center bg-red-500 text-xs px-2 py-0.5 ml-3 uppercase font-bold text-primary-color dark:text-stone-800 rounded-full">
                       {type}

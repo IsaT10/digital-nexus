@@ -9,6 +9,7 @@ const Nav = () => {
   const [isDark, setIsDark] = useState(true);
   const { logOut, user } = useContext(AuthContext);
   const { cartItems } = useContext(CartContext);
+
   const dark = (e) => {
     e.preventDefault();
     document.documentElement.classList.toggle("dark");

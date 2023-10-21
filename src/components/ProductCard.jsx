@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { BsEyeFill, BsFillCartFill, BsFillPencilFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
+import Star from "./star";
+import { AuthContext } from "../context/AuthContext";
 const ProductCard = ({
   product: {
     _id,
@@ -15,6 +17,9 @@ const ProductCard = ({
   },
 }) => {
   const { addToCart } = useContext(CartContext);
+  const {
+    user: { email },
+  } = useContext(AuthContext);
 
   const handleAddToCart = () => {
     const data = {
@@ -25,6 +30,7 @@ const ProductCard = ({
       image,
       rating,
       price,
+      email,
     };
     addToCart(data);
   };
@@ -42,15 +48,10 @@ const ProductCard = ({
               />
               <div className="flex-auto p-4 justify-evenly">
                 <div className="flex justify-between items-center">
-                  <div className=" flex-none text-sm flex items-center text-primary-color dark:text-gray-600">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 text-red-500 mr-1"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
+                  <div className=" flex-none text-sm flex gap-2 items-center text-primary-color dark:text-gray-600">
+                    <div className="flex items-center gap-1">
+                      <Star rating={rating} />
+                    </div>
                     <span className="text-primary-color dark:text-gray-400 font-semibold whitespace-nowrap mr-3">
                       {rating}
                     </span>
