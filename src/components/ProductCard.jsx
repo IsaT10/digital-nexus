@@ -17,11 +17,11 @@ const ProductCard = ({
   },
 }) => {
   const { addToCart } = useContext(CartContext);
-  const {
-    user: { email },
-  } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
 
   const handleAddToCart = () => {
+    const email = user.email;
+
     const data = {
       name,
       brandName,
@@ -34,7 +34,6 @@ const ProductCard = ({
     };
     addToCart(data);
   };
-
   return (
     <div>
       <div className="flex flex-col items-center justify-center ">

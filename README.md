@@ -1,6 +1,6 @@
 # 5 project feature
 
-- On this website, there are a lot of popular brands of products like Apple,Samsung. Also available mobile, camera, earbuds, etc.
+- On this website, there are a lot of popular brands of products like Apple,Samsung. Also available mobile, camera, earbuds, etc. People can buy all of the popular brands in one space.
 
 - If there is a need to update some products I can update or edit them.
 

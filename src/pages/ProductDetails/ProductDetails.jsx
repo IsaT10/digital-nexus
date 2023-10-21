@@ -47,16 +47,16 @@ const ProductDetails = () => {
                 {error}
               </p>
             ) : (
-              <div className="max-w-7xl mx-4 xl:mx-auto  md:flex justify-between my-20 gap-8">
+              <div className="max-w-7xl mx-8 object-cover sm:object-none xl:mx-auto md:flex lg:justify-between my-12 md:my-20 gap-8">
                 <img
-                  className="rounded-sm md:w-1/2 object-cover h-[425px]"
+                  className="rounded-sm w-full md:w-1/2 object-cover h-[425px]"
                   src={image}
                   alt=""
                 />
-                <div className="md:w-5/12 justify-between rounded-sm bg-stone-200 dark:bg-stone-600 py-8 px-7 flex flex-col gap-4">
+                <div className="md:w-1/2 lg:w-5/12 justify-between rounded-sm bg-stone-200 dark:bg-stone-600 py-6 md:py-8 px-7 flex flex-col gap-4">
                   <h3 className="text-3xl font-semibold">{name}</h3>
                   <h5 className="text-xl font-semibold">{price}</h5>
-                  <p className=" font-semibold tracking-wider text-secondary-color dark:text-stone-300 pr-36">
+                  <p className=" font-semibold tracking-wider text-secondary-color dark:text-stone-300 lg:pr-36">
                     {shortDescription}
                   </p>
                   <div className="flex justify-between items-center">

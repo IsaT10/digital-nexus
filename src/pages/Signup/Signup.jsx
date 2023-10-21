@@ -17,12 +17,11 @@ const Signup = () => {
     password: "",
     confirmPassword: "",
   });
-  const [checked, setChecked] = useState(false);
 
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
 
-  const { createUser, googleSignIn, userProfileUpdate } =
+  const { createUser, googleSignIn, userProfileUpdate, setLoading } =
     useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -38,6 +37,7 @@ const Signup = () => {
         userProfileUpdate(userInfo.name)
           .then(() => {
             // Profile updated!
+            setLoading(false);
             // ...
           })
           .catch((error) => {
@@ -48,7 +48,7 @@ const Signup = () => {
         // verifyEmail().then(() => {
         //     toast.success("Please check your email");
         // });
-        toast.success("Successful Signup");
+        toast.success("Successful Sign up");
         navigate(from, { replace: true });
 
         // navigate("/");
@@ -130,16 +130,9 @@ const Signup = () => {
     }
   };
 
-  const handleChecked = (e) => {
-    setChecked(e.target.checked);
-  };
-
   return (
-    <div className="bg-secondary-color sm:w-[350px] md:w-[450px] h-[700px] flex flex-col px-10 lg:px-10 mx-16 sm:mx-auto rounded-md my-10">
-      <form
-        onSubmit={handleSubmit}
-        className="flex flex-col  justify-between py-4"
-      >
+    <div className="bg-stone-300 sm:w-[350px] md:w-[450px] py-5 sm:py-8 flex flex-col md:px-10 px-6 lg:px-10 mx-6 sm:mx-auto rounded-md my-10">
+      <form onSubmit={handleSubmit} className="flex flex-col  justify-between ">
         <h2 className="text-xl text-primary-color md:text-2xl lg:text-3xl font-bold text-center">
           Register
         </h2>
@@ -205,39 +198,22 @@ const Signup = () => {
           {errors.confirmPassword}
         </p>
 
-        <div className="form-control">
-          <label className="cursor-pointer flex gap-4 items-center">
-            <input
-              onClick={handleChecked}
-              type="checkbox"
-              className="checkbox checkbox-sm rounded-full"
-            />
-            <p className="label-text text-gray-400 font-semibold mt-2">
-              I agree to the
-              <span className="link no-underline text-primary-color">
-                Terms & Conditions
-              </span>
-            </p>
-          </label>
-        </div>
-        {}
-        <button
-          className="bg-primary-color px-8 py-2 text-white uppercase font-semibold rounded-sm  mx-auto w-40 disabled:opacity-75 mt-2"
-          disabled={!checked}
-        >
+        <button className="bg-primary-color px-8 py-2 text-white uppercase font-semibold rounded-sm  mx-auto w-40 disabled:opacity-75 mt-4">
           Sign up
         </button>
-        <p className="text-center mt-3 text-stone-200">
+        <p className="text-center mt-3 text-secondary-color">
           Already have an account?
           <Link to="/login" className="link no-underline text-primary-color">
-            {""} Login
+            Login
           </Link>
         </p>
-        <p className="text-center text-stone-200">----Or, sign up with----</p>
+        <p className="text-center text-secondary-color">
+          ----Or, sign up with----
+        </p>
       </form>
       <button
         onClick={handleGoogleSignIn}
-        className="bg-primary-color p-3 rounded-full  flex items-center justify-center gap-2"
+        className="bg-primary-color p-3 rounded-full  flex items-center justify-center gap-2 mt-4"
       >
         <FaGoogle className="text-secondary-color" />
         <span className="font-semibold text-stone-200">Google</span>

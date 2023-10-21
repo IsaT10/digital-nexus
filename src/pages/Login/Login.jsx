@@ -107,7 +107,7 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-secondary-color sm:w-[350px] md:w-[400px] mx-10 sm:mx-auto my-10 md:my-20 rounded-md flex flex-col px-10  justify-between shadow-lg py-8">
+    <div className="bg-secondary-color sm:w-[350px] md:w-[400px] mx-6 sm:mx-auto my-10 md:my-20 rounded-md flex flex-col px-4 sm:px-10  justify-between shadow-lg py-8">
       <form
         onSubmit={handleSubmit}
         className=" flex flex-col justify-between  "
